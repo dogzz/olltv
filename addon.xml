@@ -4,11 +4,11 @@
        version="0.0.1"
        provider-name="dogzz">
     <requires>
-        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.simplejson" version="3.3.0"/>
         <import addon="script.module.requests" version="0.13.2"/>
     </requires>
-    <extension point="xbmc.python.script" library="start.py">
+    <extension point="xbmc.python.pluginsource" library="start.py">
         <provides>video executable</provides>
     </extension>
     <extension point="xbmc.addon.metadata">

@@ -36,7 +36,7 @@ if addon.getSetting('firstrun') == '0' or addon.getSetting('firstrun') == '':
 if os.path.exists(cookie_path):
     os.remove(cookie_path)
 
-if addon.getSetting('username').isdigit() and addon.getSetting('password').isdigit():
+if len(addon.getSetting('username')) != 0 and len(addon.getSetting('password')) != 0:
     # ##################################	   Home screen		####################################### #
     if log_in():
         import Background
