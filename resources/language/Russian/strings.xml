@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- Вкладки -->
+
+    <!-- Пункты меню -->
+    <string id="30010">Логин</string>
+    <string id="30011">Пароль</string>
+
+    <!-- Сообщения об ошибках -->
+    <string id="30100">Ошибка</string>
+    <string id="30101">Введены не цифровые значения в поле "пользователь" или "пароль"</string>
+    <string id="30102">Ошибка входа!</string>
+
+</strings>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<strings>
+    <!-- Tabs -->
+
+    <!-- Menu items -->
+    <string id="30010">Login</string>
+    <string id="30011">Password</string>
+
+    <!-- Error messages -->
+    <string id="30100">Error</string>
+    <string id="30101">Entered non numerical values in the "user" or "password" fields</string>
+    <string id="30102">Log in error!</string>
+
+</strings>

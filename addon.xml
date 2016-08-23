@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.oll.tv"
+       name="Oll.TV"
+       version="0.0.1"
+       provider-name="dogzz">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+        <import addon="script.module.simplejson" version="3.3.0"/>
+        <import addon="script.module.requests" version="0.13.2"/>
+    </requires>
+    <extension point="xbmc.python.script" library="start.py">
+        <provides>video executable</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Plugin to watch IPTV from Oll.TV</summary>
+        <summary lang="ru">Дополнение для просмотра IPTV с Oll.TV</summary>
+        <summary lang="ua">Додаток для перегляду IPTV із Oll.TV</summary>
+        <description lang="en">Oll.Tv is ...</description>
+        <description lang="ru">Oll.Tv - это ...
+        </description>
+        <description lang="ua">Oll.Tv - це ...</description>
+        <platform>all</platform>
+    </extension>
+</addon>
