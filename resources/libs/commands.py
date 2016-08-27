@@ -36,17 +36,17 @@ def clear_history():
             dialog.notification(addon_id, loc_string(32048), icon=icon, sound=False)
 
 
-def clear_cache():
+def clear_cache(show_dialog=True):
     cache = os.path.join(config_dir, '__cache__.pcl')
-    if os.path.exists(cache) and dialog.yesno(loc_string(32025), loc_string(32026)):
+    if os.path.exists(cache) and (not show_dialog or dialog.yesno(loc_string(32025), loc_string(32026)) ):
         os.remove(cache)
         if not os.path.exists(cache):
             dialog.notification(addon_id, loc_string(32027), icon=icon, sound=False)
 
 
-def clear_cookies():
+def clear_cookies(show_dialog=True):
     cookies = os.path.join(config_dir, '__cookies__.pcl')
-    if os.path.exists(cookies) and dialog.yesno(loc_string(32025), loc_string(32049)):
+    if os.path.exists(cookies) and (not show_dialog or dialog.yesno(loc_string(32025), loc_string(32049))):
         os.remove(cookies)
         if not os.path.exists(cookies):
             dialog.notification(addon_id, loc_string(32050), icon=icon, sound=False)

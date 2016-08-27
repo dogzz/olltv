@@ -96,11 +96,13 @@ def root(params):
     elif plugin.content_type == 2:
         listing = media_categories({'content': 'audio'})
     else:
-        listing = [
-            {'label': '[{0}]'.format(_('TV')),
-             'url': plugin.get_url(action='channel_packs', content='tv'),
-             'thumb': os.path.join(icons, 'video.png')
-             }
+        listing = channel_packs({'content': 'tv'})
+        plugin.action()
+            # [
+            # {'label': '[{0}]'.format(_('TV')),
+            #  'url': plugin.get_url(action='channel_packs', content='tv'),
+            #  'thumb': os.path.join(icons, 'video.png')
+            #  }
             # ,
             # {'label': '[{0}]'.format(_('Video')),
             #  'url': plugin.get_url(action='categories', content='video'),
@@ -110,7 +112,7 @@ def root(params):
             #  'url': plugin.get_url(action='categories', content='audio'),
             #  'thumb': os.path.join(icons, 'audio.png')
             #  }
-        ]
+        # ]
     for item in listing:
         yield item
     # yield {
@@ -417,7 +419,8 @@ def bookmarks(params):
     """
     Login to display ex.ua bookmarks
     """
-    commands.clear_cookies()
+    commands.clear_cookies(False)
+    commands.clear_cache(False)
     if not webclient.is_logged_in():
         plugin.log('Trying to login to Oll.tv')
         username = plugin.get_setting('username', False)
